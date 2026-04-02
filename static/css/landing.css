@@ -1,0 +1,206 @@
+/* ------------------------------------------------------------------ */
+/* Hero — overrides style.css for the new centered design              */
+/* ------------------------------------------------------------------ */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem 5rem;
+    max-width: 680px;
+    margin: 0 auto;
+    gap: 0;
+}
+
+/* Badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #0f1a2e;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    border: 1px solid #c8e6c9;
+    margin-bottom: 2rem;
+}
+
+.hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #34c577;
+    flex-shrink: 0;
+}
+
+/* Title */
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: #0f1a2e;
+    margin-bottom: 1.25rem;
+}
+
+.hero-title-accent {
+    color: #2cb89e;
+    font-style: normal;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+}
+
+/* CTA buttons */
+.hero-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #0f1a2e;
+    color: #ffffff;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.hero-btn:hover { background: #1e3a5f; }
+
+/* Dashboard mock */
+.hero-dashboard {
+    width: 100%;
+    max-width: 640px;
+}
+
+.dashboard-mock {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem 1.5rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+/* Traffic lights */
+.dashboard-traffic-lights {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+}
+
+.tl {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.tl-red    { background: #ff5f57; }
+.tl-yellow { background: #febc2e; }
+.tl-green  { background: #28c840; }
+
+/* Stats row */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem 1.25rem;
+    border-right: 1px solid var(--border-soft);
+    text-align: left;
+}
+
+.stat-box:last-child { border-right: none; }
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+}
+
+.stat-value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: #0f1a2e;
+    line-height: 1.2;
+}
+
+.stat-sub {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+}
+
+.stat-sub-red  { color: #e05252; }
+.stat-sub-teal { color: #2cb89e; }
+
+/* Category bars */
+.dashboard-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.dash-bar-row {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dash-bar-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-align: left;
+}
+
+.dash-bar-track {
+    height: 8px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.dash-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.dash-bar-food   { background: #f5a623; }
+.dash-bar-travel { background: #4a90d9; }
+.dash-bar-bills  { background: #8b6ec9; }
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .hero { padding: 3rem 1rem 4rem; }
+    .stat-value { font-size: 1.2rem; }
+    .stat-box { padding: 0.75rem; }
+}

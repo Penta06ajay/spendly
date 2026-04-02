@@ -35,3 +35,10 @@ Match the style of terms.html
 3. In @templates/landing.html, update the "Privacy Policy" footer link href from "#"
 to "/privacy"
 4. Make sure the appreance looks like the webiste's theme
+--------------------------------------------------------
+
+I've provided the path of the screenshot of the updated Spendly hero section design.
+@/home/spiro-ajay/Desktop/claude_test/expense-tracker/expense-tracker/image.jpeg
+
+Modify only the hero section in @templates/landing.html and @static/css/landing.css
+to match this image exactly. Do not touch any other part of the page.
