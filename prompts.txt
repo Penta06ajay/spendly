@@ -7,3 +7,16 @@ Both should be plain text links, no special styling needed for now.
 point both to "#" as placeholder hrefs since the ppages dont exist yet.
 
 Do not modify anything else on the page.
+
+
+--------------------------------------------
+Create a "Terms and Conditions" page for Spendly.
+
+1. Add a new route in [@app.py](http://app.py/):
+GET / terms -> renders templates/terms.html
+2. Create templates/terms.html with generic terms and Conditions content appropriate for 
+a personal expense tracking app.
+ Include sections like: Acceptance of the Terms, Use of service, User Data, 
+ Limitations of Liabilty, and changes to Terms.
+ Extend base.html if it exists, otherwise match the style of landing,html
+3. In @templates/landing.html, update the "Terms and Conditions" footer link href from "#" to "/terms".
